@@ -431,7 +431,8 @@ gulp.task('watch', function() {
   if (patch.src.copy_js && patch.src.copy_js != '')
     gulp.watch(patch.src.copy_js, gulp.series('js:copy'));
 
-  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,png,svg}', gulp.series('img:opt', 'img:webp'));
+  gulp.watch(patch.src.img + '*.{jpg,jpeg,gif,png}', gulp.series('img:opt', 'img:webp'));
+  gulp.watch(patch.src.img + '*.{svg}', gulp.series('img:opt'));
   gulp.watch(patch.src.favicon, gulp.series('favicon'));
 
   gulp.watch(patch.src.fonts, gulp.series('font'));
