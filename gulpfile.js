@@ -56,8 +56,8 @@ var patch = {
     copy_js: 'source/libs/js/*.js',
     svg_sprite: 'source/img/sprite-svg/',
     img_sprite: '',
-    img_to_bg: 'source/blocks/img_inline_css/',
-    svg_inline: 'source/blocks/svg_inline_css/'
+    img_to_bg: 'source/img/inline_img_to_css/',
+    svg_inline: 'source/img/inline_svg_to_css/'
   },
   build: {
     root: 'build/',
