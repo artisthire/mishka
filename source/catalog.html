@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="no-js no-webp" lang="ru">
+
+<head>
+  @@include("html_templates/page-head.html", {
+    "add_style_file" : [],
+    "add_head_script": []
+  })
+
+  <title>Каталог товаров нашего магазина</title>
+</head>
+
+<body class="inner-page">
+  @@include("img/sprite-svg/img/sprite-svg.svg")
+
+  @@include("html_templates/main-header.html", {
+    "current_page": "catalog_html"
+  })
+  <main>
+
+    <h1 class="inner-page__header">
+      Каталог товаров
+    </h1>
+
+    <section class="product-catalog">
+      <h2 class="visually-hidden">Перечень товаров</h2>
+      <ul class="products-catalog__list">
+        <li class="product-catalog__item product-card">
+
+          <a class="product-card__link-desc" href="product-descr.html#bunny" aria-label="Детально о товаре">
+            <picture class="product-card__img-wrap">
+              <source type="image/webp" srcset="img/product-photo-1.webp">
+
+              <img class="product-card__img" src="img/product-photo-1.jpg" alt="Зайчик-попрыгайчик">
+            </picture>
+          </a>
+
+          <div class="product-card__desc">
+            <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+            <p class="product-card__short-descr">Рост 30 см, вес 200 г</p>
+          </div>
+
+          <div class="product-card__buy">
+            <p class="product-card__cost">1 200 р.</p>
+
+            <a class="product-card__buy_link" href="basket.html#bunny">
+              <span class="visually-hidden">Добавить в корзину</span>
+              <svg role="presentation" aria-hidden="true" width="20" height="19">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
+
+        </li>
+        <li class="product-catalog__item product-card">
+
+          <a class="product-card__link-desc" href="product-descr.html#flasket" aria-label="Детально о товаре">
+            <picture class="product-card__img-wrap">
+              <source type="image/webp" srcset="img/product-photo-2.webp">
+
+              <img class="product-card__img" src="img/product-photo-2.jpg" alt="Корзинка для белья">
+            </picture>
+          </a>
+
+          <div class="product-card__desc">
+            <h3 class="product-card__title">Корзинка для белья</h3>
+            <p class="product-card__short-descr">Диаметр 15 см, высота 10 см</p>
+          </div>
+
+          <div class="product-card__buy">
+            <p class="product-card__cost">690 р.</p>
+
+            <a class="product-card__buy_link" href="basket.html#flasket">
+              <span class="visually-hidden">Добавить в корзину</span>
+              <svg role="presentation" aria-hidden="true" width="20" height="19">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
+
+        </li>
+        <li class="product-catalog__item product-card">
+
+          <a class="product-card__link-desc" href="product-descr.html#big_basket" aria-label="Детально о товаре">
+            <picture class="product-card__img-wrap">
+              <source type="image/webp" srcset="img/product-photo-3.webp">
+
+              <img class="product-card__img" src="img/product-photo-3.jpg" alt="Большая корзинка для игрушек">
+            </picture>
+          </a>
+
+          <div class="product-card__desc">
+            <h3 class="product-card__title">Большая корзинка для игрушек</h3>
+            <p class="product-card__short-descr">Диаметр 30 см, высота 30 см</p>
+          </div>
+
+          <div class="product-card__buy">
+            <p class="product-card__cost">1 500 р.</p>
+
+            <a class="product-card__buy_link" href="basket.html#big_basket">
+              <span class="visually-hidden">Добавить в корзину</span>
+              <svg role="presentation" aria-hidden="true" width="20" height="19">
+                <use xlink:href="#icon-cart"></use>
+              </svg>
+            </a>
+          </div>
+
+        </li>
+      </ul>
+    </section>
+
+    <section class="product-making">
+      <h2 class="product-making__title">Процесс производства</h2>
+
+      <div class="product-making__video-container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/video-preview--lg.webp">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-preview--md.webp">
+          <source type="image/webp" srcset="img/video-preview--sm.webp">
+
+          <source media="(min-width: 1440px)" srcset="img/video-preview--lg.png">
+          <source media="(min-width: 768px)" srcset="img/video-preview--md.jpg">
+
+          <img class="product-making__img-preview" src="img/video-preview--sm.jpg" alt="Процесс производства">
+        </picture>
+
+        <button class="product-making__video-control" type="button" hidden>
+          <span class="visually-hidden">Воспроизвести видео</span>
+          <svg role="presentation" aria-hidden="true" width="101" height="77">
+            <use xlink:href="#icon-play"></use>
+          </svg>
+        </button>
+      </div>
+
+      <p class="product-making__info">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+
+     <p class="product-making__buy-link">
+       <a href="#basket" class="btn">Сделать заказ</a>
+     </p>
+    </section>
+
+  </main>
+
+  @@include("html_templates/main-footer.html", {
+     "current_page": "index_html"
+   })
+</body>
+
+</html>
