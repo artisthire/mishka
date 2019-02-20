@@ -26,11 +26,21 @@
       <span class="menu-toggle-btn__line"></span>
     </button>
 
-    <!-- Переключение активного меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
+    <!-- Переключение активного пункта меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
+    <!-- Переключение активного пункта подменю выполняется добавлением класса extend-navigation__item--current к элементам списка -->
     <ul class="site-navigation__list js-site-menu">
       @@if (current_page === "index_html") {
       <li class="site-navigation__item">
         <a href="catalog.html">Каталог товаров</a>
+
+        <ul class="extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
       </li>
       <li class="site-navigation__item">
         <a href="form.html">Вязание на заказ</a>
@@ -39,6 +49,15 @@
       @@if (current_page === "catalog_html") {
       <li class="site-navigation__item site-navigation__item--current">
         <a>Каталог товаров</a>
+
+        <ul class="extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
       </li>
       <li class="site-navigation__item">
         <a href="form.html">Вязание на заказ</a>
@@ -47,22 +66,20 @@
       @@if (current_page === "form_html") {
       <li class="site-navigation__item">
         <a href="catalog.html">Каталог товаров</a>
+
+        <ul class="extend-navigation">
+          <li class="extend-navigation__item">
+            <a href="new_product.html">Новые поступления</a>
+          </li>
+          <li class="extend-navigation__item">
+            <a href="sale.html">Распродажа</a>
+          </li>
+        </ul>
       </li>
       <li class="site-navigation__item site-navigation__item--current">
         <a>Вязание на заказ</a>
       </li>
       }
-    </ul>
-  </nav>
-
-  <nav class="extend-navigation">
-    <ul class="extend-navigation__list">
-      <li class="extend-navigation__item">
-        <a href="new_product.html">Новые поступления</a>
-      </li>
-      <li class="extend-navigation__item">
-        <a href="sale.html">Распродажа</a>
-      </li>
     </ul>
   </nav>
 
@@ -84,4 +101,6 @@
       </li>
     </ul>
   </nav>
+
+  <p class="main-header__info">Бесплатная доставка по России</p>
 </header>
