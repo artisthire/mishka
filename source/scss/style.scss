@@ -12,6 +12,11 @@
 @import 'scaffolding.scss';
 
 
-/* @import '../blocks/visually-hidden.scss';
-@import '../blocks/wrapper.scss';
- */
+@import '../blocks/visually-hidden.scss';
+
+
+@import '../blocks/main-header.scss';
+@import '../blocks/menu-toggle-btn.scss';
+@import '../blocks/site-navigation.scss';
+@import '../blocks/extend-navigation.scss';
+@import '../blocks/user-navigation.scss';

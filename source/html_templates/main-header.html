@@ -23,7 +23,9 @@
   <nav class="site-navigation">
     <!--DEV При открытии меню к кнопке нужно добавлять класс menu-toggle-btn--open -->
     <button class="main-header__toggle-btn menu-toggle-btn menu-toggle-btn--open js-menu-toggle-btn" name="toggle-menu" type="button" aria-label="Открыть меню" hidden>
-      <span class="menu-toggle-btn__line"></span>
+      <div class="menu-toggle-btn__container">
+        <span class="menu-toggle-btn__line"></span>
+      </div>
     </button>
 
     <!--DEV Переключение активного пункта меню выполняется добавлением класса site-navigation__item--current к элементам списка -->
@@ -83,26 +85,24 @@
     </ul>
   </nav>
 
-  <nav class="user-navigation">
-    <ul class="user-navigation__list">
-      <li class="user-navigation_item user-navigation_item--search">
-        <a href="search.html">
-          <svg role="presentation" aria-hidden="true" width="18" height="18">
-            <use xlink:href="#icon-search"></use>
-          </svg>
-          <span class="user-navigation__search-text">Поиск по сайту</span>
-        </a>
-      </li>
-      <li class="user-navigation_item user-navigation_item--cart">
-        <a href="cart.html">
-          <svg role="presentation" aria-hidden="true" width="21" height="18">
-            <use xlink:href="#icon-cart"></use>
-          </svg>
-          Корзина: пока пусто
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <ul class="user-navigation">
+    <li class="user-navigation__item">
+      <a href="search.html">
+        <svg class="user-navigation__link-icon" role="presentation" aria-hidden="true" width="18" height="18">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+        <span class="user-navigation__search-text">Поиск по сайту</span>
+      </a>
+    </li>
+    <li class="user-navigation__item">
+      <a href="cart.html">
+        <svg class="user-navigation__link-icon" role="presentation" aria-hidden="true" width="21" height="18">
+          <use xlink:href="#icon-cart"></use>
+        </svg>
+        Корзина: пока пусто
+      </a>
+    </li>
+  </ul>
 
   <p class="main-header__info">Бесплатная доставка по России</p>
 </header>
