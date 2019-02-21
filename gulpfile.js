@@ -7,6 +7,7 @@ var changed = require('gulp-changed');
 var debug = require('gulp-debug');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 var fileinclude = require('gulp-file-include');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
@@ -116,6 +117,7 @@ gulp.task('html', function () {
     basepath: '@file',
     indent: true
   }))
+  .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
   .pipe(gulp.dest(patch.build.root))
   .pipe(browserSync.reload({stream:true}));
 });
@@ -161,7 +163,11 @@ gulp.task('style', function() {
       this.emit('end');
     }
   }))
-  // .pipe(debug({title: 'Style:'}))
+  .pipe(fileinclude({
+    prefix: '@@',
+    basepath: '@file',
+    indent: true
+  }))
   .pipe(sass())
   .pipe(gulpIf(isDev, sourcemaps.init()))
   .pipe(postcss(postCssPlugins))
