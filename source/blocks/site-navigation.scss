@@ -1,8 +1,13 @@
 .site-navigation {
   font-size: 17px;
   font-weight: 700;
-  line-height: (24/14);
+  line-height: (24/17);
   color: $black;
+
+  @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+    font-size: 15px;
+    line-height: (24/15);
+  }
 }
 
 .site-navigation__list {
@@ -16,20 +21,20 @@
   display: block;
   border-top: 1px solid $gray-light;
 
-  & a {
+  & > a {
     display: block;
-    padding: 25px;
+    padding: 28px;
     padding-left: 75px;
     color: inherit;
     text-decoration: none;
   }
 
-  & a[href]:hover,
-  & a[href]:focus {
+  & > a[href]:hover,
+  & > a[href]:focus {
     opacity: 0.6;
   }
 
-  & a[href]:active {
+  & > a[href]:active {
     opacity: 0.3;
   }
 }

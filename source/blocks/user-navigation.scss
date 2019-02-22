@@ -4,7 +4,7 @@
   padding: 0;
   font-size: 17px;
   font-weight: 700;
-  line-height: (24/14);
+  line-height: (24/17);
   color: $black;
   list-style: none;
 }
@@ -16,7 +16,7 @@
 
   & a {
     display: block;
-    padding: 25px;
+    padding: 28px;
     padding-left: 75px;
     color: inherit;
     text-decoration: none;
@@ -25,23 +25,22 @@
 
   & a[href]:hover,
   & a[href]:focus {
-    color: transparentize($black, 0.6);
+    color: rgba($black, 0.6);
     fill: $icon-background--active;
   }
 
   & a[href]:active {
     opacity: 0.3;
   }
-}
 
-.user-navigation__link-icon {
-  position: absolute;
-  top: 50%;
-  left: 32px;
-  height: 18px;
-  transform: translateY(-50%);
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    height: 18px;
+    margin-top: -9px;
+  }
 }
-
 
 .user-navigation__search-text {
 

@@ -41,3 +41,13 @@
   right: 21px;
   transform: translateY(-50%);
 }
+
+.main-header__info {
+  display: none;
+  font-size: 15px;
+  line-height: (24/15);
+
+  @media (min-width: $screen-md){
+    display: block;
+  }
+}
