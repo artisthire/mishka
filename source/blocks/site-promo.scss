@@ -1,0 +1,16 @@
+.site-promo {
+  padding-top: 75px;
+  background: #fafafa url('../img/background-header--sm@1x.jpg') no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.site-promo__slogan {
+  margin: 0;
+  margin-bottom: 120px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: (30/27);
+  color: $black;
+  text-align: center;
+}
