@@ -1,0 +1,38 @@
+.market-features {
+  color: $black;
+}
+
+.market-features__title {
+  font-size: $font-size-title--sm;
+  font-weight: 700;
+  line-height: $line-height-title--sm;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-title--md;
+    line-height: $line-height-title--md;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-title--lg;
+    line-height: $line-height-title--lg;
+  }
+}
+
+.market-features__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.market-features__item {
+  margin-bottom: 25px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (20/17);
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+    line-height: (22/20);
+  }
+}

@@ -1,0 +1,31 @@
+.market-reviews {
+
+}
+
+.market-reviews__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: $font-size-title--sm;
+  font-weight: 700;
+  line-height: $line-height-title--sm;
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 50px;
+    font-size: $font-size-title--md;
+    line-height: $line-height-title--md;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-title--lg;
+    line-height: $line-height-title--lg;
+  }
+}
+
+.market-reviews__link {
+  margin: 0;
+
+  & > a {
+    display: block;
+  }
+}

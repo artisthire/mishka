@@ -1,0 +1,50 @@
+.popular-product__name {
+  font-size: $font-size-title--sm;
+  font-weight: 700;
+  line-height: $line-height-title--sm;
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: $font-size-title--md;
+    line-height: $line-height-title--md;
+  }
+
+  @media (min-width: $screen-lg) {
+    font-size: $font-size-title--lg;
+    line-height: $line-height-title--lg;
+  }
+}
+
+.popular-product__rating {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-main;
+}
+
+.popular-product__specification {
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: (20/15);
+}
+
+.popular-product__img {
+  display: block;
+  width: 100%;
+}
+
+.popular-product__cost {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (24/17);
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+    line-height: (24/20);
+  }
+}
+
+.popular-product__link {
+  display: block;
+}

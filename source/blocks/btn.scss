@@ -1,0 +1,36 @@
+.btn {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px;
+  border: 2px solid $text-color;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (20/17);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: $text-color;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $text-color;
+  }
+
+  &:active,
+  &:focus {
+    color: rgba($white, 0.3);
+    background-color: $text-color;
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
+    color: $text-color !important;
+    background-color: transparent !important;
+    cursor: default;
+  }
+}

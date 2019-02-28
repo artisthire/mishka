@@ -1,0 +1,39 @@
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 15px 0;
+  list-style: none;
+
+  @media (max-width: $screen-md - 1) {
+    border-bottom: 1px solid #ededed;
+  }
+}
+
+.social-links__item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-links__link {
+  display: block;
+  padding: 10px;
+
+  &:hover {
+    fill: #46c1ae;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+    fill: #46c1ae;
+  }
+}

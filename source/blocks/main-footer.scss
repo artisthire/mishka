@@ -1,0 +1,16 @@
+.main-footer {
+  background-color: $gray-lighten;
+}
+
+.main-footer__logo {
+  display: block;
+
+  @media (max-width: $screen-md - 1) {
+    display: none;
+  }
+}
+
+.main-footer__social {
+
+
+}
