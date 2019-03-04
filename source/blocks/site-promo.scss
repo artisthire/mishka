@@ -3,6 +3,10 @@
   background: #fafafa url('../img/background-header--sm@1x.jpg') no-repeat;
   background-size: auto 373px;
   background-position: center -30px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 165px;
+  }
 }
 
 .site-promo__slogan {
