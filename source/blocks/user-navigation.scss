@@ -19,12 +19,12 @@
 .user-navigation__item {
   position: relative;
   display: block;
-  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
 
   @media (min-width: $screen-md) {
     display: flex;
     align-items: center;
-    border-top: none;
+    border-bottom: none;
     border-left: 1px solid $gray-light;
   }
 }

@@ -1,18 +1,45 @@
 .site-promo {
+  position: relative;
   padding-top: 75px;
-  background: #fafafa url('../img/background-header--sm@1x.jpg') no-repeat;
+  background-color: #fafafa;
+  background-image: url('../img/background-header--sm@1x.jpg');
   background-size: auto 373px;
   background-position: center -30px;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/background-header--sm@2x.jpg');
+  }
 
   @media (min-width: $screen-md) {
+    padding-top: 160px;
+    background-image: url('../img/background-header--md.jpg');
+    background-size: auto 764px;
+    background-position: center -20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      height: 22px;
+      background-image: linear-gradient(to bottom, transparent, transparent 45%, $white 45%), svg-load('background-zigzag-fill.svg');
+      background-repeat: no-repeat, repeat no-repeat;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
     padding-top: 165px;
+    background-image: url('../img/background-header--lg.jpg');
   }
 }
 
 .site-promo__slogan {
   max-width: 260px;
   margin: 0 auto;
-  margin-bottom: 110px;
+  margin-bottom: 115px;
   font-size: 27px;
   font-weight: 700;
   line-height: (30/27);
@@ -21,13 +48,23 @@
 
   @media (min-width: $screen-md) {
     max-width: 660px;
+    margin-bottom: 365px;
     font-size: $font-size-title--md;
     line-height: $line-height-title--md;
   }
 
   @media (min-width: $screen-lg) {
     max-width: 700px;
+    margin-bottom: 350px;
     font-size: $font-size-title--lg;
     line-height: $line-height-title--lg;
+  }
+}
+
+.site-promo__products {
+
+  @media (max-width: $screen-md - 1) {
+    margin-left: -30px;
+    margin-right: -30px;
   }
 }
