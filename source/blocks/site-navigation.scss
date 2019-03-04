@@ -17,6 +17,10 @@
   list-style: none;
 }
 
+.menu-toggle-btn--close ~ .site-navigation__list {
+  display: none;
+}
+
 .site-navigation__item {
   display: block;
   border-top: 1px solid $gray-light;

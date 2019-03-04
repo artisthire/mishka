@@ -1,3 +1,7 @@
+.menu-toggle-btn--close ~ .user-navigation {
+  display: none;
+}
+
 .user-navigation {
   display: block;
   margin: 0;
