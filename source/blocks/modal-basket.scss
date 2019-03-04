@@ -1,0 +1,56 @@
+.modal-basket__title {
+  font-size: $font-size-title--sm;
+  font-weight: 700;
+  line-height: $line-height-title--sm;
+  text-transform: uppercase;
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: 30px;
+    line-height: (57/30);
+  }
+}
+
+.modal-basket__form-legend {
+  font-size: 15px;
+  line-height: (30/15);
+
+  @media (min-width: $screen-md) {
+    font-size: 17px;
+    line-height: (30/17);
+  }
+}
+
+.modal-basket__size-btn {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.modal-basket__submit-btn {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 20px 15px 15px;
+  border: none;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  color: $white;
+  background-color: $color-main;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
+
+  &:active,
+  &:focus {
+    color: rgba($white, 0.3);
+  }
+}
