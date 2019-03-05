@@ -1,14 +1,29 @@
 .main-contacts {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
+  @media (min-width: $screen-md) {
+    padding-top: 70px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-bottom: 105px;
+    padding-left: 275px;
+  }
 }
 
 .main-contacts__title {
+  margin: 0;
+  margin-bottom: 35px;
   font-size: 18px;
   font-weight: 700;
   line-height: (30/18);
   color: $black;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 55px;
     font-size: $font-size-title--md;
     line-height: $line-height-title--md;
   }
@@ -20,13 +35,19 @@
 }
 
 .main-contacts__detail {
-  margin-bottom: 60px;
+  //TODO: доделать стилизацию таблицы контактов
+  margin-bottom: 40px;
   font-size: 15px;
   line-height: (30/15);
 
   @media (min-width: $screen-md) {
+    margin-bottom: 60px;
     font-size: 17px;
     line-height: (30/17);
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 80px;
   }
 }
 
@@ -57,8 +78,7 @@
 }
 
 .main-contacts__map-wrap {
-  position: relative;
-  height: 455px;
+  height: 460px;
   margin-bottom: 39px;
   overflow: hidden;
 
@@ -67,9 +87,13 @@
   }
 }
 
-.main-contacts__map-img {
+.main-contacts__map-img,
+.main-contacts__map-container {
+  position: absolute;
+  left: 0;
+  right: 0;
   display: block;
-  width: 100%;
+  height: inherit;
 }
 
 .main-contacts__link {
