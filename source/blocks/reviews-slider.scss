@@ -1,3 +1,10 @@
+.js .reviews-slider {
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 60px;
+  }
+}
+
 .reviews-slider {
   position: relative;
 }
@@ -7,48 +14,78 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
+}
+
+.js .reviews-slider__item {
+  display: none;
+
+  &--current {
+    display: block;
+  }
 }
 
 .reviews-slider__item {
   margin: 0;
+  margin-bottom: 30px;
 
   @media (max-width: $screen-md - 1) {
     line-height: (30/15);
   }
 
   @media (min-width: $screen-md) {
-    background-image: url(../img/background-review.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left center;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 40px;
   }
 }
 
-.reviews-slider__quote {
-  margin: 0;
-  margin-bottom: 30px;
-
-  @media (min-width: $screen-md) {
-    margin-bottom: 50px;
-  }
-}
-
-.reviews-slider__author {
-  display: block;
-  margin-bottom: 30px;
+.js .reviews-slider__quote {
 
   @media (min-width: $screen-md) {
     margin-bottom: 0;
   }
 }
 
+.reviews-slider__quote {
+  display: block;
+  min-height: 60px;
+  margin: 0;
+  margin-bottom: 35px;
+
+  @media (min-width: $screen-md) {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+}
+
+.js .reviews-slider__author {
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 210px;
+  }
+}
+
+.reviews-slider__author {
+  display: block;
+}
+
 .reviews-slider__author-name {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 17px;
   font-style: normal;
   font-weight: 700;
   line-height: (24/17);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .reviews-slider__author-nick {
@@ -56,6 +93,9 @@
   font-size: 17px;
   font-style: italic;
   line-height: (30/17);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .no-js .reviews-slider__controls {
@@ -65,6 +105,14 @@
 .reviews-slider__controls {
   display: flex;
   margin-bottom: 38px;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 175px;
+    margin-bottom: 0;
+  }
 }
 
 .reviews-slider__btn {
@@ -79,12 +127,17 @@
   background-color: transparent;
   cursor: pointer;
 
+  @media (min-width: $screen-md) {
+    height: 58px;
+    border: none;
+  }
+
   &:hover::after {
     opacity: 0.6;
   }
 
-  &:active,
-  &:focus {
+  &:active::after,
+  &:focus::after {
     opacity: 0.3;
   }
 
@@ -107,9 +160,5 @@
     margin-top: -13px;
     margin-left: -25px;
     background: svg-load('slider-btn-arrow.svg') center no-repeat;
-  }
-
-  @media (min-width: $screen-md) {
-    border: none;
   }
 }

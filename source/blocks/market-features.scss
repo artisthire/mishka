@@ -58,6 +58,7 @@
   background-position: 8px top;
 
   @media (min-width: $screen-md) {
+    min-height: 2.5em;
     margin-bottom: 55px;
     font-size: 20px;
     line-height: (22/20);

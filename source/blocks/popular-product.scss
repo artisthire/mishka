@@ -72,11 +72,11 @@
 
   @media (min-width: $screen-md) {
     position: relative;
-    padding-right: 56%;
+    padding-right: 380px;
   }
 
   @media (min-width: $screen-lg) {
-    padding-right: 66%;
+    padding-right: 580px;
   }
 }
 
@@ -95,6 +95,7 @@
 }
 
 .popular-product__specification {
+  max-width: 500px;
   width: 100%;
   margin-bottom: 30px;
   font-size: 15px;
@@ -111,7 +112,7 @@
     text-align: left;
 
     &:first-child {
-      width: 100px;
+      width: 35%;
     }
   }
 
@@ -130,11 +131,13 @@
     position: absolute;
     top: 2px;
     right: 0;
+    width: 334px;
   }
 
   @media (min-width: $screen-lg) {
     top: -150px;
     z-index: -1;
+    width: 525px;
   }
 }
 

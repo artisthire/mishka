@@ -52,6 +52,9 @@
     "build": "cross-env NODE_ENV=production gulp build"
   },
   "dependencies": {
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-sequence": "^1.0.0",
+    "gulp-webp": "^4.0.1",
     "leaflet": "^1.4.0",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3"

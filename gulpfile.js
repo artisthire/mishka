@@ -117,7 +117,7 @@ gulp.task('html', function () {
     basepath: '@file',
     indent: true
   }))
-  .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
+  .pipe(gulpIf(!isDev, replace(/\n\s*<!--DEV[\s\S]+?-->/gm, '')))
   .pipe(gulp.dest(patch.build.root))
   .pipe(browserSync.reload({stream:true}));
 });
