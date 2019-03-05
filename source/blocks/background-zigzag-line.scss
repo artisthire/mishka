@@ -1,0 +1,24 @@
+.background-zigzag-line {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background-image: svg-load('background-zigzag-line.svg');
+    background-size: auto 6px;
+    background-position: center bottom;
+    background-repeat: repeat no-repeat;
+
+    @media (min-width: $screen-md) {
+      background-size: auto 15px;
+    }
+
+    @media (min-width: $screen-lg) {
+      background-size: auto 23px;
+    }
+  }
+}

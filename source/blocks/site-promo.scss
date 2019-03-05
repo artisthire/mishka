@@ -16,18 +16,6 @@
     background-image: url('../img/background-header--md.jpg');
     background-size: auto 764px;
     background-position: center -20px;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      z-index: 3;
-      height: 22px;
-      background-image: linear-gradient(to bottom, transparent, transparent 45%, $white 45%), svg-load('background-zigzag-fill.svg');
-      background-repeat: no-repeat, repeat no-repeat;
-    }
   }
 
   @media (min-width: $screen-lg) {

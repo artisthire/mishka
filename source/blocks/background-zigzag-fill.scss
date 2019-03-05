@@ -1,0 +1,30 @@
+.background-zigzag-fill {
+
+  @media (min-width: $screen-md) {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      height: 35px;
+      background-image: svg-load('background-zigzag-fill.svg');
+      background-size: auto 22px;
+      background-position: center bottom;
+      background-repeat: repeat no-repeat;
+      pointer-events: none;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+
+    &::after {
+      bottom: -19px;
+      background-size: auto 34px;
+    }
+  }
+}
+
