@@ -1,13 +1,30 @@
 .market-features {
+  padding-top: 30px;
+  padding-bottom: 55px;
   color: $black;
+
+  @media (min-width: $screen-md) {
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 65px;
+    padding-bottom: 85px;
+    padding-left: 275px;
+    padding-right: 275px;
+  }
 }
 
 .market-features__title {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: $font-size-title--sm;
   font-weight: 700;
   line-height: $line-height-title--sm;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 40px;
     font-size: $font-size-title--md;
     line-height: $line-height-title--md;
   }
@@ -23,16 +40,56 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $screen-md) {
+    columns: 2;
+    column-gap: 20px;
+  }
 }
 
 .market-features__item {
-  margin-bottom: 25px;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 50px;
   font-size: 17px;
   font-weight: 700;
   line-height: (20/17);
+  background-repeat: no-repeat;
+  background-position: 8px top;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 55px;
     font-size: 20px;
     line-height: (22/20);
+  }
+
+  &--eco {
+    background-image: svg-load('icon-eco.svg');
+    background-size: 32px auto;
+  }
+
+  &--cost {
+    background-image: svg-load('icon-cost.svg');
+    background-size: 47px auto;
+  }
+
+  &--like {
+    background-image: svg-load('icon-like.svg');
+    background-size: 34px auto;
+  }
+
+  &--handmade {
+    background-image: svg-load('icon-handmade.svg');
+    background-size: 35px auto;
+  }
+
+  &--support {
+    background-image: svg-load('icon-support.svg');
+    background-size: 55px auto;
+  }
+
+  &--price {
+    background-image: svg-load('icon-price.svg');
+    background-size: 33px auto;
   }
 }
