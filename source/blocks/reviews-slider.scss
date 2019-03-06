@@ -132,12 +132,12 @@
     border: none;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus::after {
     opacity: 0.6;
   }
 
-  &:active::after,
-  &:focus::after {
+  &:active::after {
     opacity: 0.3;
   }
 

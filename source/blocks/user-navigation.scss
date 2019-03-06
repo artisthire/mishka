@@ -37,13 +37,13 @@
   text-decoration: none;
   fill: $icon-background;
 
-  &[href]:hover {
+  &[href]:hover,
+  &[href]:focus {
     color: rgba($black, 0.6);
     fill: $icon-background--active;
   }
 
-  &[href]:active,
-  &[href]:focus {
+  &[href]:active {
     opacity: 0.3;
   }
 

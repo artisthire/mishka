@@ -12,12 +12,12 @@
   color: $black;
   fill: #63d1bb;
 
-  &:hover {
+  &:hover,
+  &:focus {
     fill: #46c1ae;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     opacity: 0.3;
   }
 }

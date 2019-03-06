@@ -15,13 +15,13 @@
   background-color: transparent;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
     background-color: $text-color;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: rgba($white, 0.3);
     background-color: $text-color;
   }

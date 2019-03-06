@@ -1,19 +1,77 @@
+
+.no-js .modal-basket {
+  position: static;
+  display: block;
+  margin: 30px auto;
+}
+
+.modal-basket {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: $z-index--modal-popup;
+  display: none;
+  width: 320px;
+  margin-left: -160px;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  border: 1px solid #c6c6c6;
+  background-color: $white;
+  box-shadow: 0 5px 10px 0 rgba($black, 0.25);
+
+  @media (min-width: $screen-md) {
+    width: 570px;
+    margin-left: -285px;
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+
 .modal-basket__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 30px;
   font-size: $font-size-title--sm;
   font-weight: 700;
   line-height: $line-height-title--sm;
   text-transform: uppercase;
+  text-align: center;
   color: $black;
 
   @media (min-width: $screen-md) {
+    margin-bottom: 25px;
     font-size: 30px;
     line-height: (57/30);
   }
 }
 
+.modal-basket__form {
+  padding: 0 30px;
+
+  @media (min-width: $screen-md) {
+    padding: 0 110px;
+  }
+}
+
+.modal-basket__form-field {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 .modal-basket__form-legend {
+  display: block;
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 15px;
   line-height: (30/15);
+  text-align: center;
 
   @media (min-width: $screen-md) {
     font-size: 17px;
@@ -21,11 +79,57 @@
   }
 }
 
+.modal-basket__select-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
+  margin-left: -5px;
+}
+
+.modal-basket__select-wrap {
+  margin: 0;
+  margin-left: 5px;
+
+  & input:checked ~ .modal-basket__size-btn {
+    border-color: $color-main;
+    cursor: default;
+  }
+
+  & input:disabled ~ .modal-basket__size-btn {
+    opacity: 0.3;
+    border-color: rgba($text-color, 0.3) !important;
+    cursor: default;
+  }
+}
+
 .modal-basket__size-btn {
+  box-sizing: border-box;
+  display: block;
+  width: 82px;
+  padding: 15px;
   font-size: 17px;
   font-weight: 700;
   line-height: 1;
   text-transform: uppercase;
+  text-align: center;
+  border: 2px solid rgba($text-color, 0.1);
+  background-color: $white;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($text-color, 0.3);
+  }
+
+  &:active {
+    border-color: $color-main;
+  }
+
+  @media (min-width: $screen-md) {
+    width: 112px;
+  }
 }
 
 .modal-basket__submit-btn {
@@ -45,12 +149,12 @@
   background-color: $color-main;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #46c1ae;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: rgba($white, 0.3);
   }
 }

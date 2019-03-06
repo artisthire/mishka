@@ -117,12 +117,12 @@
     background-color: #46c1ae;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $color-main;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     opacity: 0.3;
   }
 }
