@@ -59,11 +59,11 @@
         </table>
 
         <picture class="popular-product__img-wrap">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/week-product-1--lg.webp">
+          <source type="image/webp" media="(min-width: 1250px)" srcset="img/week-product-1--lg.webp">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/week-product-1--md.webp">
           <source type="image/webp" srcset="img/week-product-1--sm.webp">
 
-          <source media="(min-width: 1440px)" srcset="img/week-product-1--lg.png">
+          <source media="(min-width: 1250px)" srcset="img/week-product-1--lg.png">
           <source media="(min-width: 768px)" srcset="img/week-product-1--md.jpg">
 
           <img class="popular-product__img" src="img/week-product-1--sm.jpg" alt="Вязаные корзинки">
@@ -158,9 +158,12 @@
 
     </section>
 
-    <section class="wrapper main-contacts">
-      <header class="main-contacts__header">
+    <section class="main-contacts">
+
+      <div class="main-contacts__contacts-wrap">
+
         <h2 class="main-contacts__title">Контакты</h2>
+
         <table class="main-contacts__detail">
           <tr>
             <td class="main-contacts__property">e-mail:</td>
@@ -171,30 +174,33 @@
           <tr>
             <td class="main-contacts__property">адрес:</td>
             <td class="main-contacts__value">
-              г. Санкт-Петербург,<br>
-              ул. Большая Конюшенная,<br>
-              д. 19/8, офис 101</td>
+              г.&nbsp;Санкт-Петербург,<br>
+              ул.&nbsp;Большая Конюшенная,<br>
+              д.&nbsp;19/8, офис&nbsp;101</td>
           </tr>
         </table>
-      </header>
+
+      </div>
 
       <div class="main-contacts__map-wrap">
-        <picture id="main_contacts_map_backup">
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-background--lg.webp">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/map-background--md.webp">
-          <source type="image/webp" srcset="img/map-background--sm.webp">
 
-          <source media="(min-width: 1440px)" srcset="img/map-background--lg.jpg">
-          <source media="(min-width: 768px)" srcset="img/map-background--md.jpg">
-          <img class="main-contacts__map-img" src="img/map-background--sm.jpg" alt="Санкт-Петербург, ул. Большая Коннюшенная, д. 19/8" height="456">
+        <picture id="main_contacts_map_backup">
+          <source type="image/webp" media="(min-width: 1250px)" srcset="img/map-background--lg.webp">
+          <source type="image/webp" srcset="img/map-background--md.webp">
+
+          <source media="(min-width: 1250px)" srcset="img/map-background--lg.jpg">
+          <img class="main-contacts__map-img" src="img/map-background--md.jpg" alt="Санкт-Петербург, ул. Большая Коннюшенная, д. 19/8" height="456">
         </picture>
+
         <div class="main-contacts__map-container" id="main_contacts_map">
         </div>
+
       </div>
 
       <p class="main-contacts__link">
         <a class="btn" href="feedback-page.html">Напишите нам</a>
       </p>
+
     </section>
 
   </main>

@@ -41,10 +41,10 @@ img {
   max-width: 100%;
   height: auto;
   //лечит opacity при :active в IE11
-  pointer-events: none;
+  //pointer-events: none;
 }
 
 //лечит opacity при :active в IE11
-svg {
+/* svg {
   pointer-events: none;
-}
+} */
