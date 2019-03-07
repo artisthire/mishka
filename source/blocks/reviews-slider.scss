@@ -52,6 +52,7 @@
 .reviews-slider__quote {
   display: block;
   min-height: 60px;
+  max-height: 275px;
   margin: 0;
   margin-bottom: 35px;
 
@@ -62,13 +63,13 @@
 }
 
 .js .reviews-slider__author {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
 
   @media (min-width: $screen-md) {
-    position: absolute;
-    bottom: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding-right: 210px;
+    max-width: 480px;
   }
 }
 
