@@ -21,6 +21,22 @@
   @media (min-width: $screen-md) {
     flex-shrink: 0;
     display: block;
+    cursor: default;
+    fill: #231f20;
+
+    &[href] {
+      cursor: pointer;
+    }
+
+    &[href]:hover,
+    &[href]:focus {
+      fill: #46c1ae;
+    }
+
+    &[href]:active {
+      opacity: 0.3;
+      fill: #46c1ae;
+    }
   }
 }
 
