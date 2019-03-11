@@ -1,0 +1,119 @@
+.product-making {
+  position: relative;
+  margin-bottom: 60px;
+  padding-top: 95px;
+  padding-bottom: 35px;
+  border: 1px solid $gray-light;
+  background-color: $white;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 65px;
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    margin-bottom: 105px;
+    padding: 0;
+  }
+}
+
+.product-making__wrap-video {
+  position: relative;
+  height: 0;
+  margin-bottom: 30px;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background-color: $gray-light;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-shrink: 0;
+    width: 680px;
+    margin-bottom: 0;
+    padding-bottom: 36.25%;
+    border: 1px solid $gray-light;
+    border-right: none;
+  }
+}
+
+.product-making__video-container {
+  //TODO: доделать стилизацию контейнера видео
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product-making__title {
+  position: absolute;
+  top: 30px;
+  margin: 0 35px;
+  padding-left: 60px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (24/17);
+  color: $black;
+  background-image: svg-load('icon-videocamera.svg');
+  background-position: left center;
+  background-size: 32px auto;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-md) {
+    position: static;
+    margin: 0 40px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: (24/20);
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-bottom: 30px;
+    margin-left: 80px;
+    margin-right: 60px;
+    padding-left: 0;
+    padding-top: 60px;
+    background-position: left 20px;
+  }
+}
+
+.product-making__text {
+  margin: 0 35px;
+  margin-bottom: 25px;
+  font-size: 13px;
+  line-height: (24/13);
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 35px;
+    font-size: 15px;
+    line-height: (30/15);
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 80px;
+    margin-right: 60px;
+  }
+}
+
+.product-making__wrap-link {
+  display: block;
+  margin: 0 35px;
+
+  @media (min-width: $screen-md) {
+    margin: 0 40px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 80px;
+    margin-right: 60px;
+  }
+}
+
+.product-making__buy-link {
+  display: block;
+}

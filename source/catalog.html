@@ -149,37 +149,39 @@
       </ul>
     </section>
 
-    <section class="wrapper product-making">
-      <h2 class="product-making__title">Процесс производства</h2>
+    <div class="wrapper">
+      <section class="product-making">
 
-      <div class="product-making__video-container">
-        <picture>
-          <source type="image/webp" media="(min-width: 1250px)" srcset="img/video-preview--lg.webp">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-preview--md.webp">
-          <source type="image/webp" srcset="img/video-preview--sm.webp">
+        <div class="product-making__wrap-video">
 
-          <source media="(min-width: 1250px)" srcset="img/video-preview--lg.png">
-          <source media="(min-width: 768px)" srcset="img/video-preview--md.jpg">
+          <video class="product-making__video-container" controls width="260" height="150" poster="img/video-preview--md.jpg" preload="none">
+            <source src="/examples/media/martynko.mp4" type="video/mp4">
+            <source src="/examples/media/martynko.webm" type="video/webm">
+            <source src="/examples/media/martynko.ogv" type="video/ogg">
+          </video>
 
-          <img class="product-making__img-preview" src="img/video-preview--sm.jpg" alt="Процесс производства">
-        </picture>
+          <button class="product-making__video-control" type="button" hidden>
+            <span class="visually-hidden">Воспроизвести видео</span>
+            <svg role="presentation" aria-hidden="true" width="101" height="77">
+              <use xlink:href="#icon-play"></use>
+            </svg>
+          </button>
+        </div>
 
-        <button class="product-making__video-control" type="button" hidden>
-          <span class="visually-hidden">Воспроизвести видео</span>
-          <svg role="presentation" aria-hidden="true" width="101" height="77">
-            <use xlink:href="#icon-play"></use>
-          </svg>
-        </button>
-      </div>
+        <div class="product-making__wrap-desc">
+          <h2 class="product-making__title">Процесс производства</h2>
 
-      <p class="product-making__text">
-        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-      </p>
+          <p class="product-making__text">
+            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+          </p>
 
-     <p class="product-making__buy-link">
-       <a class="btn" href="#basket">Сделать заказ</a>
-     </p>
-    </section>
+          <p class="product-making__wrap-link">
+            <a class="btn product-making__buy-link" href="#basket">Сделать заказ</a>
+          </p>
+        </div>
+
+      </section>
+    </div>
 
   </main>
 
