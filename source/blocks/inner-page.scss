@@ -1,0 +1,26 @@
+.inner-page__header {
+  display: block;
+  margin: 0;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: (50/27);
+  text-align: center;
+  color: $black;
+  background-color: $gray-lighten;
+
+  @media (min-width: $screen-md) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    font-size: $font-size-title--md;
+    line-height: $line-height-title--md;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: $font-size-title--lg;
+    line-height: $line-height-title--lg;
+  }
+}
