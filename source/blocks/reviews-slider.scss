@@ -1,12 +1,19 @@
-.js .reviews-slider {
-
-  @media (min-width: $screen-md) {
-    padding-bottom: 60px;
-  }
-}
-
 .reviews-slider {
   position: relative;
+}
+
+.js .reviews-slider__list {
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    position: relative;
+    height: 235px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 185px;
+  }
 }
 
 .reviews-slider__list {
@@ -15,6 +22,10 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
+
+  @media (max-width: $screen-md - 1) {
+    line-height: (30/15);
+  }
 }
 
 .js .reviews-slider__item {
@@ -23,58 +34,64 @@
   &--current {
     display: block;
   }
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+
+    &--prev {
+      transform: translateX(-100%);
+    }
+
+    &--next {
+      transform: translateX(100%);
+    }
+
+    &--current {
+      transform: translateX(0);
+    }
+  }
 }
 
 .reviews-slider__item {
   margin: 0;
-  margin-bottom: 30px;
-
-  @media (max-width: $screen-md - 1) {
-    line-height: (30/15);
-  }
-
-  @media (min-width: $screen-md) {
-    margin-bottom: 55px;
-  }
-
-  @media (min-width: $screen-lg) {
-    margin-bottom: 40px;
-  }
 }
 
-.js .reviews-slider__quote {
-
-  @media (min-width: $screen-md) {
-    margin-bottom: 0;
-  }
+.no-js .reviews-slider__quote {
+  height: auto;
 }
 
 .reviews-slider__quote {
   display: block;
   min-height: 60px;
-  max-height: 275px;
+  max-height: 300px;
   margin: 0;
   margin-bottom: 35px;
+  overflow-y: auto;
 
   @media (min-width: $screen-md) {
-    max-height: 150px;
-    overflow-y: auto;
+    height: 120px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 90px;
+    margin-bottom: 35px;
   }
 }
 
-.js .reviews-slider__author {
-  position: absolute;
-  bottom: 0;
-  box-sizing: border-box;
-  width: 100%;
-
-  @media (min-width: $screen-md) {
-    max-width: 480px;
-  }
+.no-js .reviews-slider__author {
+  margin-bottom: 40px;
 }
 
 .reviews-slider__author {
   display: block;
+  max-width: 450px;
 }
 
 .reviews-slider__author-name {
