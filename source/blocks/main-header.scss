@@ -16,8 +16,8 @@
 }
 
 .main-header__logo {
-  display: block;
-  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 
   &[href]:hover,
   &[href]:focus {

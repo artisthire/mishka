@@ -5,6 +5,13 @@
   }
 }
 
+.no-js .site-navigation {
+
+  @media (max-width: $screen-md - 1) {
+    position: static;
+  }
+}
+
 .site-navigation {
   position: absolute;
   z-index: 5;

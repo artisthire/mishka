@@ -1,0 +1,36 @@
+.product-catalog {
+  padding-top: 30px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-top: 130px;
+  }
+}
+
+.products-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -50px;
+  }
+}
+
+.product-catalog__item {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $screen-lg) {
+    margin-left: 50px;
+  }
+}

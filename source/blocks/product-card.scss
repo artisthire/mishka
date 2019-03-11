@@ -1,0 +1,134 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $screen-lg) {
+    flex-direction: column;
+    width: 315px;
+  }
+}
+
+.product-card__link-img {
+  display: block;
+  height: 195px;
+  overflow: hidden;
+  background-color: $gray-light;
+
+  @media (min-width: $screen-md) {
+    flex-shrink: 0;
+    width: 50%;
+    height: 334px;
+  }
+
+  @media (min-width: $screen-lg) {
+    width: 100%;
+    height: 462px;
+  }
+}
+
+.product-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-card__desc {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 30px;
+  padding-top: 20px;
+  border: 1px solid $gray-light;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba($black, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba($black, 0.1);
+  }
+}
+
+.product-card__link-desc {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (24/17);
+  text-decoration: none;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $screen-md) {
+    font-size: 20px;
+    line-height: (24/20);
+  }
+}
+
+.product-card__short-descr {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: (30/13);
+
+  @media (min-width: $screen-md) {
+    font-size: 15px;
+    line-height: (30/15);
+  }
+}
+
+.product-card__wrap-buy {
+  position: relative;
+  margin-top: auto;
+  padding: 20px 0;
+  padding-right: 40px;
+  border-top: 1px solid $gray-light;
+}
+
+.product-card__cost {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: (24/15);
+
+  @media (min-width: $screen-md) {
+    font-size: 17px;
+    line-height: (24/17);
+  }
+}
+
+.product-card__buy-link {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 19px;
+  margin-top: -20px;
+  padding: 10px;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: $color-main;
+  }
+}

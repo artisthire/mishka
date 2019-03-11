@@ -22,94 +22,134 @@
       Каталог товаров
     </h1>
 
-    <section class="product-catalog">
+    <section class="wrapper product-catalog">
       <h2 class="visually-hidden">Перечень товаров</h2>
       <ul class="products-catalog__list">
+
         <li class="product-catalog__item product-card">
 
-          <a class="product-card__link-desc" href="product-descr.html#bunny" aria-label="Детально о товаре">
+          <a class="product-card__link-img" href="product-descr.html#bunny" aria-label="Детально о товаре">
             <picture class="product-card__img-wrap">
-              <source type="image/webp" srcset="img/product-photo-1.webp">
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/product-photo-1--lg.webp">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/product-photo-1--md.webp">
+              <source type="image/webp" srcset="img/product-photo-1--sm.webp">
 
-              <img class="product-card__img" src="img/product-photo-1.jpg" alt="Зайчик-попрыгайчик">
+              <source media="(min-width: 1250px)" srcset="img/product-photo-1--lg.jpg">
+              <source media="(min-width: 768px)" srcset="img/product-photo-1--md.jpg">
+
+              <img class="product-card__img" src="img/product-photo-1--sm.jpg" alt="Зайчик-попрыгайчик">
             </picture>
           </a>
 
           <div class="product-card__desc">
-            <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+
+            <a class="product-card__link-desc" href="product-descr.html#bunny" aria-label="Детально о товаре">
+              Зайчик-попрыгайчик
+            </a>
+
             <p class="product-card__short-descr">Рост 30 см, вес 200 г</p>
-          </div>
 
-          <div class="product-card__buy">
-            <p class="product-card__cost">1 200 р.</p>
+            <div class="product-card__wrap-buy">
 
-            <a class="product-card__buy-link" href="basket.html#bunny">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg role="presentation" aria-hidden="true" width="20" height="19">
-                <use xlink:href="#icon-cart"></use>
-              </svg>
-            </a>
+              <p class="product-card__cost">1 200 р.</p>
+
+              <a class="product-card__buy-link" href="#modal-basket">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg role="presentation" aria-hidden="true" width="20" height="19">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+
+            </div>
+
           </div>
 
         </li>
+
         <li class="product-catalog__item product-card">
 
-          <a class="product-card__link-desc" href="product-descr.html#flasket" aria-label="Детально о товаре">
+          <a class="product-card__link-img" href="product-descr.html#flasket" aria-label="Детально о товаре">
             <picture class="product-card__img-wrap">
-              <source type="image/webp" srcset="img/product-photo-2.webp">
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/product-photo-2--lg.webp">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/product-photo-2--md.webp">
+              <source type="image/webp" srcset="img/product-photo-2--sm.webp">
 
-              <img class="product-card__img" src="img/product-photo-2.jpg" alt="Корзинка для белья">
+              <source media="(min-width: 1250px)" srcset="img/product-photo-2--lg.jpg">
+              <source media="(min-width: 768px)" srcset="img/product-photo-2--md.jpg">
+
+              <img class="product-card__img" src="img/product-photo-2--sm.jpg" alt="Корзинка для белья">
             </picture>
           </a>
 
           <div class="product-card__desc">
-            <h3 class="product-card__title">Корзинка для белья</h3>
+
+            <a class="product-card__link-desc" href="product-descr.html#flasket" aria-label="Детально о товаре">
+              Корзинка для белья
+            </a>
+
             <p class="product-card__short-descr">Диаметр 15 см, высота 10 см</p>
-          </div>
 
-          <div class="product-card__buy">
-            <p class="product-card__cost">690 р.</p>
+            <div class="product-card__wrap-buy">
 
-            <a class="product-card__buy-link" href="basket.html#flasket">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg role="presentation" aria-hidden="true" width="20" height="19">
-                <use xlink:href="#icon-cart"></use>
-              </svg>
-            </a>
+              <p class="product-card__cost">690 р.</p>
+
+              <a class="product-card__buy-link" href="#modal-basket">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg role="presentation" aria-hidden="true" width="20" height="19">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+
+            </div>
+
           </div>
 
         </li>
+
         <li class="product-catalog__item product-card">
 
-          <a class="product-card__link-desc" href="product-descr.html#big_basket" aria-label="Детально о товаре">
+          <a class="product-card__link-img" href="product-descr.html#big_basket" aria-label="Детально о товаре">
             <picture class="product-card__img-wrap">
-              <source type="image/webp" srcset="img/product-photo-3.webp">
+              <source type="image/webp" media="(min-width: 1250px)" srcset="img/product-photo-3--lg.webp">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/product-photo-3--md.webp">
+              <source type="image/webp" srcset="img/product-photo-3--sm.webp">
 
-              <img class="product-card__img" src="img/product-photo-3.jpg" alt="Большая корзинка для игрушек">
+              <source media="(min-width: 1250px)" srcset="img/product-photo-3--lg.jpg">
+              <source media="(min-width: 768px)" srcset="img/product-photo-3--md.jpg">
+
+              <img class="product-card__img" src="img/product-photo-3--sm.jpg" alt="Большая корзинка для игрушек">
             </picture>
           </a>
 
           <div class="product-card__desc">
-            <h3 class="product-card__title">Большая корзинка для игрушек</h3>
-            <p class="product-card__short-descr">Диаметр 30 см, высота 30 см</p>
-          </div>
 
-          <div class="product-card__buy">
-            <p class="product-card__cost">1 500 р.</p>
-
-            <a class="product-card__buy-link" href="basket.html#big_basket">
-              <span class="visually-hidden">Добавить в корзину</span>
-              <svg role="presentation" aria-hidden="true" width="20" height="19">
-                <use xlink:href="#icon-cart"></use>
-              </svg>
+            <a class="product-card__link-desc" href="product-descr.html#big_basket" aria-label="Детально о товаре">
+              Большая корзинка для игрушек
             </a>
+
+            <p class="product-card__short-descr">Диаметр 30 см, высота 30 см</p>
+
+            <div class="product-card__wrap-buy">
+
+              <p class="product-card__cost">1 500 р.</p>
+
+              <a class="product-card__buy-link" href="#modal-basket">
+                <span class="visually-hidden">Добавить в корзину</span>
+                <svg role="presentation" aria-hidden="true" width="20" height="19">
+                  <use xlink:href="#icon-cart"></use>
+                </svg>
+              </a>
+
+            </div>
+
           </div>
 
         </li>
+
       </ul>
     </section>
 
-    <section class="product-making">
+    <section class="wrapper product-making">
       <h2 class="product-making__title">Процесс производства</h2>
 
       <div class="product-making__video-container">
@@ -148,6 +188,8 @@
    })
 
    @@include("html_templates/modal-basket.html")
+
+   <script src="js/script.min.js"></script>
 </body>
 
 </html>
