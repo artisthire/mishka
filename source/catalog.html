@@ -152,15 +152,14 @@
     <div class="wrapper">
       <section class="product-making">
 
-        <div class="product-making__wrap-video">
+        <div class="product-making__video-container">
 
-          <video class="product-making__video-container" controls width="260" height="150" poster="img/video-preview--md.jpg" preload="none">
-            <source src="/examples/media/martynko.mp4" type="video/mp4">
-            <source src="/examples/media/martynko.webm" type="video/webm">
-            <source src="/examples/media/martynko.ogv" type="video/ogg">
-          </video>
 
-          <button class="product-making__video-control" type="button" hidden>
+          <figure class="product-making__wrap-video">
+            <iframe class="product-making__video" width="260" height="146" src="https://www.youtube-nocookie.com/embed/JklSwmLwGiM?controls=0&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </figure>
+
+          <button class="product-making__video-control" type="button">
             <span class="visually-hidden">Воспроизвести видео</span>
             <svg role="presentation" aria-hidden="true" width="101" height="77">
               <use xlink:href="#icon-play"></use>
