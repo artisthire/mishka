@@ -20,7 +20,7 @@
 
     <h1 class="wrapper background-zigzag-fill inner-page__header">Вязание на заказ</h1>
 
-    <form class="wrapper form-orders" action="https://echo.htmlacademy.ru/" method="post">
+    <form class="form-orders" action="https://echo.htmlacademy.ru/" method="post">
 
       <h2 class="visually-hidden">Данные для вязания на заказ</h2>
 
@@ -123,7 +123,7 @@
         <legend class="visually-hidden">Контактная информация</legend>
 
         <p class="form-input-text form-orders__input-wrap">
-          <label class="form-orders__legend" for="tel">ТЕЛ</label>
+          <label class="form-orders__legend form-orders__legend--label" for="tel">ТЕЛ</label>
           <input class="form-input-text__input" id="tel" name="telephone" type="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
           <svg role="presentation" aria-hidden="true" width="17" height="13">
             <use xlink:href="#icon-phone"></use>
@@ -131,7 +131,7 @@
         </p>
 
         <p class="form-input-text form-orders__input-wrap">
-          <label class="form-orders__legend" for="email">E-mail</label>
+          <label class="form-orders__legend form-orders__legend--label" for="email">E-mail</label>
           <input class="form-input-text__input" id="email" name="email" type="email" placeholder="Ваш Email*" required>
           <svg role="presentation" aria-hidden="true" width="17" height="13">
             <use xlink:href="#icon-email"></use>
@@ -149,7 +149,7 @@
       </fieldset>
 
       <div class="form-orders__submit-wrap">
-        <p class="form-orders__required-info">* — Обязательные поля</p>
+        <p class="form-orders__required-info">*Поля обязательны для заполнения</p>
         <button class="btn form-orders__btn-submit" type="submit">Отправить заказ</button>
       </div>
 

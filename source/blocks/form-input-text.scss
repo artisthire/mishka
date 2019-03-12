@@ -1,0 +1,36 @@
+.form-input-text {
+  position: relative;
+
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (18/17);
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: 19px;
+    line-height: 1;
+  }
+}
+
+.form-input-text__label {
+
+}
+
+.form-input-text__input {
+  box-sizing: border-box;
+  width: 100%;
+  font: inherit;
+  font-weight: 400;
+  color: inherit;
+
+  &[type='email'],
+  &[type='tel'] {
+    padding-right: 45px;
+  }
+
+  &::placeholder {
+    font: inherit;
+    color: rgba($text-color, 0.3);
+  }
+}
