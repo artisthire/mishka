@@ -1,0 +1,21 @@
+.form-orders {
+
+}
+
+.form-orders__descr {
+  font-size: 13px;
+  line-height: (24/13);
+
+  @media (min-width: $screen-md) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+.form-orders__legend {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $color-main;
+}

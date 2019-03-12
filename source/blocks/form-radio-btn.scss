@@ -1,0 +1,70 @@
+.form-radio-btn {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: (18/17);
+  color: $black;
+
+  @media (min-width: $screen-md) {
+    font-size: 19px;
+    line-height: 1;
+  }
+}
+
+//скрываем "правильно" для скринридеров
+.form-radio-btn__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+
+  &:checked ~ .form-radio-btn__label > .form-radio-btn__pseudo-icon {
+
+  }
+
+  //передаем фокус по умолчанию на псевдоиконку
+  &:focus ~ .form-radio-btn__label > .form-radio-btn__pseudo-icon {
+    border-color: #663d15;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
+  &:disabled ~ .form-radio-btn__label {
+    opacity: 0.5;
+  }
+}
+
+
+.form-radio-btn__label {
+
+
+  &:hover > .form-radio-btn__pseudo-icon {
+
+  }
+
+  &:active {
+
+  }
+
+  @media (min-width: $screen-md) {
+
+  }
+}
+
+.form-radio-btn__pseudo-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+
+
+  @media (min-width: $screen-md) {
+
+  }
+}
