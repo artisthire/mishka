@@ -1,6 +1,5 @@
 .form-input-text {
   position: relative;
-
   font-family: inherit;
   font-size: 17px;
   font-weight: 700;
@@ -8,29 +7,69 @@
   color: $black;
 
   @media (min-width: $screen-md) {
+    display: flex;
     font-size: 19px;
     line-height: 1;
   }
 }
 
 .form-input-text__label {
+  display: block;
+  margin-bottom: 15px;
 
+  @media (min-width: $screen-md) {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
 }
 
 .form-input-text__input {
   box-sizing: border-box;
   width: 100%;
+  padding: 0;
+  padding-bottom: 15px;
+  border: none;
+  border-bottom: 2px solid $black;
   font: inherit;
   font-weight: 400;
-  color: inherit;
+  color: $text-color;
+  background-color: transparent;
+  outline: none;
 
   &[type='email'],
   &[type='tel'] {
     padding-right: 45px;
   }
 
+  &:hover,
+  &:focus {
+    border-color: $color-main;
+
+    & ~ svg {
+      fill: $color-main;
+    }
+  }
+
   &::placeholder {
     font: inherit;
     color: rgba($text-color, 0.3);
+  }
+
+  @media (min-width: $screen-md) {
+    flex-grow: 1;
+    width: auto;
+  }
+
+  & ~ svg {
+    position: absolute;
+    bottom: 17px;
+    right: 5px;
+    width: 32px;
+    height: 24px;
+    fill: rgba($black, 0.2);
+
+    @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
+      right: 25px;
+    }
   }
 }

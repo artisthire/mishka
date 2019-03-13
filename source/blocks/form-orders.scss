@@ -50,10 +50,12 @@
   @media (min-width: $screen-md) {
     margin-bottom: 0;
     padding: 50px;
+    padding-top: 65px;
     padding-left: 220px;
 
     &:last-of-type {
       margin-bottom: 0;
+      padding-top: 50px;
     }
 
     &:nth-child(even) {
@@ -62,7 +64,12 @@
   }
 
   @media (min-width: $screen-lg) {
-    padding: 50px 225px;
+    padding: 65px 225px;
+    padding-bottom: 50px;
+
+    &:last-of-type {
+      padding-top: 50px;
+    }
   }
 }
 
@@ -71,7 +78,7 @@
   align-items: center;
   width: 100%;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 17px;
   font-weight: 700;
   line-height: 1;
@@ -82,14 +89,21 @@
     content: '';
     flex-grow: 1;
     height: 1px;
+    margin-top: 1px;
     margin-left: 25px;
-    background-color: $color-main;
+    border-top: 1px solid $color-main;
+  }
+
+  &--label {
+    pointer-events: none;
   }
 
   @media (min-width: $screen-md) {
     position: absolute;
     top: 65px;
     left: 50px;
+    width: auto;
+    margin: 0;
 
     &--label {
       top: 0;
