@@ -1,131 +1,88 @@
 (function(document) {
+
 var toggle_btn = document.querySelector('.js-menu-toggle-btn');
 
-//установка исходного состояния главного меню (закрыто)
-toggle_btn.classList.remove('menu-toggle-btn--open');
-toggle_btn.classList.add('menu-toggle-btn--close');
+//обрабатываем только если кнопка видна (высота больше нуля)
+if (toggle_btn && toggle_btn.offsetHeight != 0) {
 
-if (toggle_btn.hasAttribute('aria-label'))
-  toggle_btn.setAttribute('aria-label', 'Открыть меню');
+  var screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var screen_md = 768;
 
+  //установка исходного состояния главного меню (закрыто)
+  toggle_btn.classList.remove('menu-toggle-btn--open');
+  toggle_btn.classList.add('menu-toggle-btn--close');
 
-//обработка отрытия меню
-
-toggle_btn.addEventListener('click', function() {
-  if(this.classList.contains('menu-toggle-btn--open')) {
-    this.classList.remove('menu-toggle-btn--open');
-    this.classList.add('menu-toggle-btn--close');
-
-    if (toggle_btn.hasAttribute('aria-label'))
-      toggle_btn.setAttribute('aria-label', 'Открыть меню');
-  }
-  else {
-    this.classList.add('menu-toggle-btn--open');
-    this.classList.remove('menu-toggle-btn--close');
-
-    if (toggle_btn.hasAttribute('aria-label'))
-      toggle_btn.setAttribute('aria-label', 'Закрыть меню');
-  }
-});
+  if (toggle_btn.hasAttribute('aria-label'))
+    toggle_btn.setAttribute('aria-label', 'Открыть меню');
 
 
-// инициализация и добавление интерактивной карты на странциу
-var map_container = document.getElementById('main_contacts_map');
-var map_backup = document.getElementById('main_contacts_map_backup');
+  //обработка отрытия меню
 
-//получаем ширину страницы браузера для изменения карты
-var screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//var screen_md = 768;
-var screen_lg = 1250;
+  toggle_btn.addEventListener('click', function() {
 
-// переменная, которая содержит слой карты с меткой. Необходимо для удаления/добавления маркера на разных вьюпортах
-var layer = null;
-// переменная содержит ссылку на добавленую карту
-var map = null;
-// инициализация карты
-initMap();
+    if(this.classList.contains('menu-toggle-btn--open')) {
+      this.classList.remove('menu-toggle-btn--open');
+      this.classList.add('menu-toggle-btn--close');
 
-// изменение вида карты для разных вьюпортов
-window.addEventListener('resize', function() {
-  screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      if (toggle_btn.hasAttribute('aria-label'))
+        toggle_btn.setAttribute('aria-label', 'Открыть меню');
+    }
+    else {
+      this.classList.add('menu-toggle-btn--open');
+      this.classList.remove('menu-toggle-btn--close');
 
-  // удаляем маркер с карты для его реинициализации на новых вьюпорта (чтобы небыло наложения)
-  if (layer !== null) {
-    layer.removeFrom(map);
-    initMap();
-  }
-});
-
-function initMap() {
-  //console.log('Инициализация карты');
-
-  //скрываем картинку для бэкапа если JS не работает
-  //показываем блок для дальнейшего размещения в нем карты
-  map_backup.style.display = 'none';
-  map_container.style.display = 'block';
-
-  // задаем координаты маркера
-  var lat = 59.938727;
-  var lng = 30.323085;
-
-  //задаем высоту и ширину маркера
-  var map_pin_width = 67;
-  var map_pin_height = 100;
-  // задаем относительную точку позиционирования маркера над координатами
-  var map_pin_anchor_g = Math.round(map_pin_width / 2);
-  var map_pin_anchor_v = map_pin_height - 1;
-
-  // на экранах планшета и больше иконка макера больше
-  /*
-  if (screen_width >= 768) {
-    map_pin_width = 113;
-    map_pin_height = 106;
-  }
-  */
-
-  //инициализация карты
-  //отключаем возможность увеличения карты по скролингу, чтобы не мешало пролистыванию страницы
-  if (map == null) {
-    map = L.map(map_container, {scrollWheelZoom: false});
-  }
-
-
-  //различные представления карты на разных вьюпортах
-  if (screen_width >= screen_lg) {
-    //уменьшаем стартовый зум до 16
-    map.setView([lat, lng], 16);
-  }
-  else {
-    map.setView([lat, lng], 17);
-  }
-
-  //инициализация тайтлов
-  // для карты gogle параметр lyrs означает
-  // lyrs=m - городсткая карта
-  // lyrs=s - спутниковые снимки
-  // lyrs=s,h - гибрид
-  L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
-    maxZoom: 20,
-    subdomains:['mt0','mt1','mt2','mt3'],
-    attribution: '&copy; <a href="https://www.google.com/permissions/geoguidelines/">Google Maps</a> contributors'
-  }).addTo(map);
-
-  var icon_url = '../img/map-pin.svg';
-  /*
-  if (document.documentElement.classList.contains('webp'))
-    icon_url='../img/map-pin.webp';
-  */
-
-
-  //инициализация иконки с указанием адреса картинки
-  var myIcon = L.icon({
-    iconUrl: icon_url,
-    iconSize: [map_pin_width, map_pin_height],
-    iconAnchor: [map_pin_anchor_g, map_pin_anchor_v]
+      if (toggle_btn.hasAttribute('aria-label'))
+        toggle_btn.setAttribute('aria-label', 'Закрыть меню');
+    }
   });
 
-  //добавление макера на карту
-  layer = L.marker([lat, lng], {icon: myIcon}).addTo(map);
+}
+
+//отработка открытия модального окна
+
+var modal_basket_window = document.querySelector('.js-modal-basket');
+var modal_backdrop = document.querySelector('.js-modal-backdrop');
+var modal_basket_open_btns = document.querySelectorAll('.js-modal-basket-btn');
+var last_focus = null;
+
+if (modal_basket_window && modal_basket_open_btns) {
+
+  last_focus = document.activeElement;
+
+  for (var i = 0; i < modal_basket_open_btns.length; i++) {
+
+    modal_basket_open_btns[i].addEventListener('click', function() {
+
+      modal_basket_window.classList.add('modal-basket--show');
+      modal_basket_window.setAttribute('tabindex', '0');
+      modal_basket_window.focus();
+
+      if (modal_backdrop)
+        modal_backdrop.classList.add('modal-backdrop--show');
+    });
+
+  }
+
+  document.addEventListener('keydown', function(event) {
+
+    if (!event.keyCode || event.keyCode === 27) {
+
+      modal_basket_window.classList.remove('modal-basket--show');
+      modal_basket_window.removeAttribute('tabindex');
+      modal_backdrop.classList.remove('modal-backdrop--show');
+      last_focus.focus();
+    }
+  });
+
+  modal_backdrop.addEventListener('click', function() {
+
+    if (this.classList.contains('modal-backdrop--show')) {
+      modal_basket_window.classList.remove('modal-basket--show');
+      modal_basket_window.removeAttribute('tabindex');
+      modal_backdrop.classList.remove('modal-backdrop--show');
+      last_focus.focus();
+    }
+  });
 }
 
 }(document));

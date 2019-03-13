@@ -92,6 +92,11 @@
   margin: 0;
   margin-left: 5px;
 
+  & input:focus ~ .modal-basket__size-btn {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
   & input:checked ~ .modal-basket__size-btn {
     border-color: $color-main;
     cursor: default;
@@ -118,13 +123,8 @@
   background-color: $white;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     border-color: rgba($text-color, 0.3);
-  }
-
-  &:active {
-    border-color: $color-main;
   }
 
   @media (min-width: $screen-md) {
