@@ -25,50 +25,70 @@
   overflow: hidden;
 
   &:checked ~ .form-checkbox-btn__label > .form-checkbox-btn__pseudo-icon::after {
-
+    border-bottom-color: $black;
+    border-left-color: $black;
   }
 
   &:focus ~ .form-checkbox-btn__label > .form-checkbox-btn__pseudo-icon {
-    border-color: #663d15;
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
+    border-color: $icon-background--active;
+  }
+
+  &:active ~ .form-checkbox-btn__label > .form-checkbox-btn__pseudo-icon {
+    border-color: rgba($text-color, 0.3);
   }
 
   &:disabled ~ .form-checkbox-btn__label {
     opacity: 0.5;
+    cursor: default;
   }
 }
 
 
 .form-checkbox-btn__label {
-  position: relative;
-
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: pointer;
 
   &:hover > .form-checkbox-btn__pseudo-icon {
-
+    border-color: $icon-background--active;
   }
 
-  &:active {
-
-  }
-
-  @media (min-width: $screen-md) {
-
+  &:active > .form-checkbox-btn__pseudo-icon {
+    border-color: rgba($text-color, 0.3);
   }
 }
 
 .form-checkbox-btn__pseudo-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
+  position: relative;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
-
+  width: 40px;
+  height: 39px;
+  margin-top: -6px;
+  margin-right: 25px;
+  border: 2px solid $text-color;
 
   @media (min-width: $screen-md) {
-
+    width: 54px;
+    height: 52px;
+    margin-top: -12px;
   }
 
   &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -80%) rotate(-45deg);
+    width: 21px;
+    height: 8px;
+    border: 2px solid transparent;
 
+    @media (min-width: $screen-md) {
+      width: 29px;
+      height: 14px;
+    }
   }
 }
