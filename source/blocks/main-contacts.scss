@@ -162,6 +162,7 @@
   left: 0;
   width: 100%;
   height: inherit;
+  z-index: 1; //лечит появление карты над модальным окном
 }
 
 .main-contacts__link {
