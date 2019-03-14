@@ -104,8 +104,9 @@
 
   & input:disabled ~ .modal-basket__size-btn {
     opacity: 0.3;
-    border-color: rgba($text-color, 0.3) !important;
+    border-color: rgba($text-color, 0.3);
     cursor: default;
+    pointer-events: none;
   }
 }
 

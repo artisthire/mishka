@@ -1,4 +1,4 @@
-(function(document) {
+(function() {
 
 // инициализация и добавление интерактивной карты на странциу
 var map_container = document.getElementById('main_contacts_map');
@@ -101,4 +101,4 @@ if (map_container && map_container) {
   }
 }
 
-}(document));
+}());

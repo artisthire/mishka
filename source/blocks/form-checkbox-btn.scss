@@ -40,6 +40,7 @@
   &:disabled ~ .form-checkbox-btn__label {
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
   }
 }
 

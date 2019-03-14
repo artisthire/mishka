@@ -1,4 +1,4 @@
-(function(document) {
+(function() {
 
 var toggle_btn = document.querySelector('.js-menu-toggle-btn');
 
@@ -38,4 +38,4 @@ if (toggle_btn && toggle_btn.offsetHeight != 0) {
 
 }
 
-}(document));
+}());

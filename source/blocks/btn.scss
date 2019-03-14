@@ -29,8 +29,9 @@
   &:disabled,
   &--disabled {
     opacity: 0.3;
-    color: $text-color !important;
-    background-color: transparent !important;
+    color: $text-color;
+    background-color: transparent;
     cursor: default;
+    pointer-events: none;
   }
 }
