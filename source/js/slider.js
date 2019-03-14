@@ -4,7 +4,9 @@
   var btn_next_slide = document.querySelector('.reviews-slider__btn--next');
   var curent_slide = document.querySelector('.reviews-slider__item--current');
 
-  btn_prev_slide.addEventListener('click', function() {
+  if (btn_prev_slide && btn_next_slide && curent_slide) {
+
+    btn_prev_slide.addEventListener('click', function() {
 
     if (curent_slide.previousElementSibling) {
 
@@ -48,5 +50,9 @@
       }
     }
   });
+
+  }
+
+
 
 }());
