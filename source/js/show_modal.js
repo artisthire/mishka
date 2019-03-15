@@ -31,7 +31,7 @@
 
       });
 
-      modal_basket_open_btns[i].addEventListener('keydown', function () {
+      modal_basket_open_btns[i].addEventListener('keydown', function (event) {
 
         if (!event.keyCode || event.keyCode === 32) {
 
