@@ -20,12 +20,27 @@
 
     for (var i = 0; i < modal_basket_open_btns.length; i++) {
 
-      modal_basket_open_btns[i].addEventListener('click', function () {
+      modal_basket_open_btns[i].addEventListener('click', function (event) {
+
+        event.preventDefault();
 
         modal_window = modal_basket_window;
         class_modal_show = 'modal-basket--show';
         after_modal_element = modal_basket_window.nextElementSibling;
         modal_show();
+
+      });
+
+      modal_basket_open_btns[i].addEventListener('keydown', function () {
+
+        if (!event.keyCode || event.keyCode === 32) {
+
+          event.preventDefault();
+          modal_window = modal_basket_window;
+          class_modal_show = 'modal-basket--show';
+          after_modal_element = modal_basket_window.nextElementSibling;
+          modal_show();
+        }
 
       });
     }
@@ -34,8 +49,11 @@
   //закрытие модального окна при клике по затенении страницы под модальным окном
 
   if (modal_backdrop)
-    modal_backdrop.addEventListener('click', function () {
+    modal_backdrop.addEventListener('click', function (event) {
+
+      event.preventDefault();
       modal_hide();
+
     });
 
 
@@ -82,7 +100,7 @@
   }
 
   //возвращаем фокус на модальное окно при переходе по клавише "TAB" на внутренность body, когда мод. окно открыто
-  function modal_refocus() {
+  function modal_refocus(event) {
 
     if (modal_open && !modal_window.contains(event.target)) {
       event.stopPropagation();
@@ -94,9 +112,12 @@
   //закрытие модального окна при нажатии клавиши ESC
   function modal_close_esc (event) {
 
-   if (!event.keyCode || event.keyCode === 27)
+   if (!event.keyCode || event.keyCode === 27) {
+
+    event.preventDefault();
     modal_hide();
 
+   }
   }
 
 }());

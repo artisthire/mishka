@@ -5,16 +5,16 @@
   }
 }
 
-.no-js .site-navigation {
+.js .site-navigation {
 
   @media (max-width: $screen-md - 1) {
-    position: static;
+    position: absolute;
+    z-index: 5;
   }
 }
 
 .site-navigation {
-  position: absolute;
-  z-index: 5;
+  display: block;
   width: 100%;
   font-size: 17px;
   font-weight: 700;

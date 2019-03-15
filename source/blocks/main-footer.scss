@@ -14,8 +14,11 @@
   display: none;
 
   & svg {
+    display: inline-block;
+    vertical-align: middle;
     width: 102px;
     height: 34px;
+    pointer-events: none;
   }
 
   @media (min-width: $screen-md) {

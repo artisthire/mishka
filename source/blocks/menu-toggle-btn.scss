@@ -1,23 +1,24 @@
 //если не работает JavaScript то скрываем кнопку открытия/закрытия меню
-.no-js .menu-toggle-btn {
-  display: none;
-}
-
-.menu-toggle-btn {
+.js .menu-toggle-btn {
   display: block;
-  margin: 0;
-  padding: 10px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
 
   @media (min-width: $screen-md) {
     display: none;
   }
 }
 
+.menu-toggle-btn {
+  display: none;
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .menu-toggle-btn__container {
   position: relative;
+  display: block;
   width: 20px;
   height: 14px;
   overflow: hidden;

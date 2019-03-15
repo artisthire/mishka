@@ -52,6 +52,7 @@
 
   &::placeholder {
     font: inherit;
+    font-weight: 400;
     color: rgba($text-color, 0.3);
   }
 
@@ -67,6 +68,7 @@
     width: 32px;
     height: 24px;
     fill: rgba($black, 0.2);
+    pointer-events: none;
 
     @media (min-width: $screen-md) and (max-width: $screen-lg - 1) {
       right: 25px;

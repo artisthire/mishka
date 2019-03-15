@@ -44,16 +44,22 @@
   }
 
   &[href]:active {
-    opacity: 0.3;
+    color: rgba($text-color, 0.3);
+
+    & svg {
+      fill: rgba($icon-background--active, 0.3);
+    }
   }
 
   & svg {
     position: absolute;
     top: 50%;
     left: 32px;
+    display: inline-block;
     width: 21px;
     height: 18px;
     margin-top: -9px;
+    pointer-events: none;
   }
 
   @media (min-width: $screen-md) {
@@ -69,6 +75,10 @@
 }
 
 .user-navigation__search-text {
+  //Лечит реакцию на :hover, :active в IE11
+  display: inline-block;
+  vertical-align: baseline;
+  pointer-events: none;
 
   @media (min-width: $screen-md) {
     position: absolute;

@@ -43,10 +43,11 @@
   }
 
   & img {
-    display: block;
+    display: inline-block;
     width: 86px;
     height: 35px;
     padding: 20px;
+    pointer-events: none;
 
     @media (min-width: $screen-md) {
       width: 112px;

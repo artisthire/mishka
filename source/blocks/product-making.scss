@@ -127,7 +127,7 @@
   color: $black;
   background-image: svg-load('icon-videocamera.svg');
   background-position: left center;
-  background-size: 32px auto;
+  background-size: 32px 22px;
   background-repeat: no-repeat;
 
   @media (min-width: $screen-md) {

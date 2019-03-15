@@ -19,7 +19,8 @@
 }
 
 .social-links__link {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   padding: 10px;
 
   &:hover,
@@ -48,6 +49,8 @@
   }
 
   & > svg {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
+    pointer-events: none;
   }
 }

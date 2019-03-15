@@ -14,13 +14,13 @@
     background-repeat: repeat no-repeat;
 
     @media (min-width: $screen-md) {
-      background-size: auto 15px;
+      background-size: 37px 15px;
     }
 
     @media (min-width: $screen-lg) {
       left: 100px;
       right: 100px;
-      background-size: auto 23px;
+      background-size: 57px 23px;
     }
   }
 }

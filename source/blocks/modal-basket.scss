@@ -1,18 +1,24 @@
-
-.no-js .modal-basket {
-  position: static;
-  display: block;
-  margin: 30px auto;
-}
-
-.modal-basket {
+.js .modal-basket {
   position: fixed;
   top: 10%;
   left: 50%;
   z-index: $z-index--modal-popup;
   display: none;
-  width: 320px;
   margin-left: -160px;
+
+  @media (min-width: $screen-md) {
+    margin-left: -285px;
+  }
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal-basket {
+  display: block;
+  width: 320px;
+  margin: 30px auto;
   padding-top: 30px;
   padding-bottom: 45px;
   border: 1px solid #c6c6c6;
@@ -21,16 +27,10 @@
 
   @media (min-width: $screen-md) {
     width: 570px;
-    margin-left: -285px;
     padding-top: 45px;
     padding-bottom: 50px;
   }
-
-  &--show {
-    display: block;
-  }
 }
-
 
 .modal-basket__title {
   display: block;

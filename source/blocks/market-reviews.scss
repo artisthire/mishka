@@ -1,3 +1,10 @@
+.webp .market-reviews {
+
+  @media (min-width: $screen-md) {
+    background-image: url(../img/background-review.webp);
+  }
+}
+
 .market-reviews {
   position: relative;
   padding-bottom: 50px;

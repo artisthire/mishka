@@ -1,3 +1,19 @@
+.webp .site-promo {
+  background-image: url('../img/background-header--sm@1x.webp');
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/background-header--sm@2x.webp');
+  }
+
+  @media (min-width: $screen-md) {
+    background-image: url('../img/background-header--md.webp');
+  }
+
+  @media (min-width: $screen-lg) {
+    background-image: url('../img/background-header--lg.webp');
+  }
+}
+
 .site-promo {
   position: relative;
   padding-top: 75px;

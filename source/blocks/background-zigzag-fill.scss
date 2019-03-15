@@ -12,7 +12,7 @@
       z-index: 3;
       height: 35px;
       background-image: svg-load('background-zigzag-fill.svg');
-      background-size: auto 22px;
+      background-size: 36px 22px;
       background-position: center bottom;
       background-repeat: repeat no-repeat;
       pointer-events: none;
@@ -23,7 +23,7 @@
 
     &::after {
       bottom: -19px;
-      background-size: auto 34px;
+      background-size: 57px 34px;
     }
   }
 }
