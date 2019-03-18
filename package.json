@@ -38,6 +38,7 @@
     "gulp-svgmin": "^2.1.0",
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify": "^3.0.1",
+    "gulp-webp": "^4.0.1",
     "gulp.spritesmith": "^6.9.0",
     "imagemin": "^6.1.0",
     "imagemin-webp": "^5.0.0",
@@ -52,9 +53,6 @@
     "build": "cross-env NODE_ENV=production gulp build"
   },
   "dependencies": {
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-sequence": "^1.0.0",
-    "gulp-webp": "^4.0.1",
     "leaflet": "^1.4.0",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3"
