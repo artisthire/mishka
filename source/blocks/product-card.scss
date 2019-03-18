@@ -14,13 +14,13 @@
 
 .product-card__link-img {
   display: block;
-  height: 195px;
+  height: 88%;
   overflow: hidden;
   background-color: $gray-light;
 
   @media (min-width: $screen-md) {
     flex-shrink: 0;
-    width: 50%;
+    width: 334px;
     height: 334px;
   }
 
