@@ -185,7 +185,7 @@ gulp.task('style', function() {
   .pipe(browserSync.stream());
 });
 
-//// TODO: поправить версионирование. Генерирует файлы два раза
+
 gulp.task('style:copy', function(done) {
   if (patch.src.copy_css && patch.src.copy_css != '') {
     console.log('---------- Копирование стилей');
