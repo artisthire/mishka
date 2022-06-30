@@ -9,5 +9,4 @@ node_modules/
 .publish
 ex_files
 Thumbs.db
-build/
 layouts/

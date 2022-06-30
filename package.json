@@ -49,9 +49,11 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp",
-    "build": "cross-env NODE_ENV=production gulp build"
+    "build": "cross-env NODE_ENV=production gulp build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "gh-pages": "^4.0.0",
     "leaflet": "^1.4.0",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3"
@@ -63,5 +65,5 @@
   "bugs": {
     "url": "https://github.com/artisthire/mishka/issues"
   },
-  "homepage": "https://github.com/artisthire/mishka#readme"
+  "homepage": "https://artisthire.github.io/catenergy/"
 }
